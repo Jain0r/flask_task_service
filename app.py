@@ -39,7 +39,8 @@ def create_task():
 
         # Llamada al servicio de notificación
         requests.post(
-            'https://flask-notitication-service.onrender.com',
+            'https://flask-notitication-service.onrender.com/notify',
+            # 'http://127.0.0.1:5001/notify',
             json=notification_data
         )
     except requests.exceptions.RequestException as e:
